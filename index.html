@@ -67,20 +67,6 @@ body{
 p{line-height:1.85;font-size:17px;margin-bottom:16px}
 .signature{text-align:right;font-style:italic;margin-top:20px}
 
-/* 2026 FIX */
-.year{
-  position:absolute;
-  top:12%;
-  left:50%;
-  transform:translateX(-50%);
-  font-size:220px;
-  font-weight:600;
-  color:rgba(255,255,255,.10);
-  text-shadow:0 0 60px rgba(255,255,255,.25);
-  z-index:1;
-  pointer-events:none;
-}
-
 /* CLICK ZONE */
 .zone{position:fixed;top:0;width:50%;height:100%}
 .left{left:0}
@@ -134,7 +120,7 @@ p{line-height:1.85;font-size:17px;margin-bottom:16px}
 
 <body>
 
-<!-- 🎵 YOUTUBE MUSIC (mute sẵn) -->
+<!-- 🎵 MUSIC -->
 <iframe id="music"
   src="https://www.youtube.com/embed/Qhx-RMpRwSg?autoplay=1&loop=1&playlist=Qhx-RMpRwSg&mute=1"
   allow="autoplay"
@@ -149,49 +135,43 @@ p{line-height:1.85;font-size:17px;margin-bottom:16px}
   <p>Click để mở thư</p>
 </div>
 
-<!-- PAGES -->
+<!-- PAGE 1 -->
 <div class="page"><div class="letter">
 <p><strong>Đà Nẵng, ngày 31 tháng 12, 2025</strong></p>
-<p><strong>Gửi: chị LiNhan</strong></p>
-<p>Phần còn lại của những gì đêm Giáng Sinh nè :&gt;</p>
+<p><strong>Gửi: Nguyễn Nữ Thục Khuê</strong></p>
 </div></div>
 
+<!-- PAGE 2 -->
 <div class="page"><div class="letter">
-<p>Mới đó mà đã tới hôm cuối của 2025 rùi, nhanh dữ lunn…</p>
-<p>Nhưng cũng là kết thúc năm thứ 2 em có một người chị tuyệt vời zay kkk.</p>
+<p>Cuối cùng thì cũng sắp hết 2025 rồi, cảm ơn chunhan đã tin tưởng dq một năm qua =)))))</p>
 </div></div>
 
+<!-- PAGE 3 -->
 <div class="page"><div class="letter">
-<p>Dù đôi lúc chị hay tự ti, lâu lâu còn hơi tiêu cực nữa…</p>
-<p>Nhưng với em, chị thật sự rất giỏi ấy.</p>
+<p>Theo dq tự đánh giá, dq đã hoàn thành xuất sắc nhiệm vụ được giao từ chunhan</p>
+<p>Xứng đáng được thưởng lương tháng 13, 14, 15</p>
+<p>Và thanh toán đầy đủ lương các tháng 1 → 12 😌</p>
 </div></div>
 
+<!-- PAGE 4 -->
 <div class="page"><div class="letter">
-<p>Em ngưỡng mộ chị lắm lunn…</p>
-<p>Chúc chị tỏa sáng bản thân hơn trong 2026 nhaaa ✨</p>
+<p>Cảm ơn vì những gì tk đã làm cho dq một năm qua</p>
+<p>Thật sự làm tui rất bất ngờ với món quà 19/11 đấy =)))</p>
 </div></div>
 
+<!-- PAGE 5 -->
 <div class="page"><div class="letter">
-<p>Dù cách nhau gần 1000km…</p>
-<p>Cảm ơn chị vì tất cả những điều năm nay.</p>
+<p>Chúc tk có một năm mới 2026 vui vẻ, hạnh phúc</p>
+<p>Xinh hơn, học giỏi hơn nữa</p>
+<p>Tự tin vào bản thân hơn</p>
+<p>Và đậu NV1 vào ngôi trường mình mơ ước nhaaa!! ✨</p>
 </div></div>
 
+<!-- PAGE 6 -->
 <div class="page"><div class="letter">
-<p>Cảm ơn chị luôn lắng nghe, động viên em…</p>
-<p>Nhớ giữ gìn sức khỏe nữa nha.</p>
-</div></div>
-
-<div class="page"><div class="letter">
-<p>Em nhớ chị nhiều lắm…</p>
-<p>Em sẽ cố hoàn thành IELTS và giữ lời hứa HCMUS.</p>
-</div></div>
-
-<div class="page">
-<div class="year">2026</div>
-<div class="letter">
-<p>Chúc chị khởi đầu năm mới 2026 vui vẻ, hạnh phúc, xinh hơn…</p>
-<p><strong>Cố lên ♡</strong></p>
-<div class="signature">— Em</div>
+<p><em>p/s:</em> Chắc trình dq tới zay hoi 😊</p>
+<p>Mà này, sao sao đừng tạo áp lực với stress nữa nè ^^</p>
+<div class="signature">— dq</div>
 </div></div>
 
 </div>
@@ -200,7 +180,7 @@ p{line-height:1.85;font-size:17px;margin-bottom:16px}
 <div class="zone right"></div>
 <div class="edge left"></div>
 <div class="edge right"></div>
-<div class="hint">👈 quay lại • 👉 đọc tiếp</div>
+<div class="hint"> quay lại • đọc tiếp</div>
 
 <script>
 const pages=document.querySelectorAll('.page');
@@ -221,7 +201,6 @@ function startLetter(){
   document.querySelector('.cover').classList.add('hide');
   showPage(0);
 
-  // 🔊 unmute nhạc
   const iframe=document.getElementById('music');
   iframe.src=iframe.src.replace('&mute=1','');
 }
