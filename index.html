@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Thư cuối năm 💌</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  height:100vh;
+  overflow:hidden;
+  font-family:'Quicksand',sans-serif;
+  background:linear-gradient(120deg,#1a2a6c,#b21f1f,#fdbb2d);
+  background-size:400% 400%;
+  animation:bgMove 18s ease infinite;
+  color:#fff;
+}
+
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.container{width:100%;height:100%;position:relative}
+
+/* COVER */
+.cover{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  background:radial-gradient(circle at top,rgba(255,255,255,.15),rgba(0,0,0,.8));
+  z-index:10;cursor:pointer;
+  transition:opacity 1s ease;
+}
+.cover.hide{opacity:0;pointer-events:none}
+.envelope{font-size:90px;animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-14px)}}
+.cover p{margin-top:18px;opacity:.8}
+
+/* PAGE */
+.page{
+  position:absolute;inset:0;
+  display:flex;justify-content:center;align-items:center;
+  padding:24px;
+  opacity:0;
+  transform:translateX(60px);
+  transition:all 1s ease;
+}
+.page.active{opacity:1;transform:translateX(0)}
+
+.letter{
+  max-width:760px;
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(10px);
+  border-radius:24px;
+  padding:36px;
+  box-shadow:0 0 60px rgba(255,255,255,.18);
+}
+
+p{line-height:1.85;font-size:17px;margin-bottom:16px}
+.signature{text-align:right;font-style:italic;margin-top:20px}
+
+/* 2026 */
+.year{
+  position:absolute;
+  top:18%;
+  font-size:200px;
+  font-weight:600;
+  color:rgba(255,255,255,.08);
+  text-shadow:0 0 50px rgba(255,255,255,.2);
+  z-index:-1;
+}
+
+/* CLICK ZONE */
+.zone{position:fixed;top:0;width:50%;height:100%}
+.left{left:0}
+.right{right:0}
+
+/* EDGE GLOW */
+.edge{
+  position:fixed;top:0;height:100%;width:0;
+  pointer-events:none;
+}
+.edge.right{
+  right:0;
+  background:radial-gradient(circle at right,rgba(255,255,255,.45),transparent 70%);
+}
+.edge.left{
+  left:0;
+  background:radial-gradient(circle at left,rgba(255,255,255,.45),transparent 70%);
+}
+.edge.show{width:30%;animation:fadeGlow .6s ease}
+@keyframes fadeGlow{
+  from{opacity:1}
+  to{opacity:0}
+}
+
+.hint{
+  position:fixed;bottom:10px;width:100%;
+  text-align:center;font-size:13px;opacity:.6
+}
+
+/* STARS */
+.star{
+  position:absolute;border-radius:50%;
+  animation:fall linear infinite;
+}
+.star.small{
+  width:2px;height:2px;
+  background:white;opacity:.6;
+}
+.star.big{
+  width:4px;height:4px;
+  background:white;opacity:.8;
+  box-shadow:0 0 6px white;
+}
+
+@keyframes fall{
+  from{transform:translateY(-10vh)}
+  to{transform:translateY(110vh)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- COVER -->
+<div class="cover" onclick="startLetter()">
+  <div class="envelope">✉️</div>
+  <p>Click để mở thư</p>
+</div>
+
+<!-- PAGES -->
+<div class="page"><div class="letter">
+<p><strong>Đà Nẵng, ngày 31 tháng 12, 2025</strong></p>
+<p><strong>Gửi: chị LiNhan</strong></p>
+<p>Phần còn lại của những gì đêm Giáng Sinh nè :&gt;</p>
+</div></div>
+
+<div class="page"><div class="letter">
+<p>Mới đó mà đã tới hôm cuối của 2025 rùi, nhanh dữ lunn…</p>
+<p>Nhưng cũng là kết thúc năm thứ 2 em có một người chị tuyệt vời zay kkk.</p>
+</div></div>
+
+<div class="page"><div class="letter">
+<p>Dù đôi lúc chị hay tự ti, lâu lâu còn hơi tiêu cực nữa…</p>
+<p>Nhưng với em, chị thật sự rất giỏi ấy.</p>
+</div></div>
+
+<div class="page"><div class="letter">
+<p>Em ngưỡng mộ chị lắm lunn…</p>
+<p>Chúc chị tỏa sáng bản thân hơn trong 2026 nhaaa ✨</p>
+</div></div>
+
+<div class="page"><div class="letter">
+<p>Dù cách nhau gần 1000km…</p>
+<p>Cảm ơn chị vì tất cả những điều năm nay.</p>
+</div></div>
+
+<div class="page"><div class="letter">
+<p>Cảm ơn chị luôn lắng nghe, động viên em…</p>
+<p>Nhớ giữ gìn sức khỏe nữa nha.</p>
+</div></div>
+
+<div class="page"><div class="letter">
+<p>Em nhớ chị nhiều lắm…</p>
+<p>Em sẽ cố hoàn thành IELTS và giữ lời hứa HCMUS.</p>
+</div></div>
+
+<div class="page">
+<div class="year">2026</div>
+<div class="letter">
+<p>Chúc chị khởi đầu năm mới 2026 vui vẻ, hạnh phúc, xinh hơn…</p>
+<p><strong>Cố lên ♡</strong></p>
+<div class="signature">— Em</div>
+</div></div>
+
+</div>
+
+<div class="zone left"></div>
+<div class="zone right"></div>
+<div class="edge left"></div>
+<div class="edge right"></div>
+<div class="hint">👈 quay lại • 👉 đọc tiếp</div>
+
+<script>
+const pages=document.querySelectorAll('.page');
+let index=0;
+
+function showPage(i){
+  pages.forEach(p=>p.classList.remove('active'));
+  pages[i].classList.add('active');
+}
+
+function glow(side){
+  const e=document.querySelector('.edge.'+side);
+  e.classList.add('show');
+  setTimeout(()=>e.classList.remove('show'),600);
+}
+
+function startLetter(){
+  document.querySelector('.cover').classList.add('hide');
+  showPage(0);
+}
+
+document.querySelector('.right').onclick=()=>{
+  if(index<pages.length-1){
+    glow('right'); index++; showPage(index);
+  }
+}
+document.querySelector('.left').onclick=()=>{
+  if(index>0){
+    glow('left'); index--; showPage(index);
+  }
+}
+
+/* STARS */
+for(let i=0;i<70;i++){
+  const s=document.createElement('div');
+  s.className='star '+(Math.random()>0.7?'big':'small');
+  s.style.left=Math.random()*100+'vw';
+  s.style.animationDuration=(Math.random()>0.7?6:3)+Math.random()*4+'s';
+  document.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>
